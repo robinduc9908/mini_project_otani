@@ -80,14 +80,12 @@ export default Vue.extend({
     async dessertsIt() {
       await api.get('/api/carts').then(response => {
         this.desserts = response.data
-        console.log(3333, this.desserts)
       })
     },
     async deleteItem(id) {
       await api.delete('/api/carts/' + id).then(response => {
         this.dessertsIt()
 
-        console.log(id)
 
       })
     }
