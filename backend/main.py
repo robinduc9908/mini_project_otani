@@ -209,7 +209,7 @@ def get_carts():
 
 @app.delete('/api/carts/{cart_id}')
 def delete_product_by_productid(cart_id: int):
-    """delete product by product_id"""
+    """delete cart by cart_id"""
     try:
         query_info = Cart.select().where(Cart.id == cart_id).dicts()
         query_info = list(query_info)
@@ -225,7 +225,7 @@ def delete_product_by_productid(cart_id: int):
 
 @app.post('/api/carts')
 def add_cart(carts: schemas.cart.Cart):
-    """add product"""
+    """add product to cart"""
     data_cart = carts.dict()
     query_info = Cart.select().where(
         (Cart.product_id == data_cart['product_id']) & (Cart.size == data_cart['size'])).dicts()
