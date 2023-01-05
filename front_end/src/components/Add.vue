@@ -110,7 +110,6 @@ export default {
   methods: {
     async addItem() {
       await api.post('/api/products', this.product).then(response => {
-        console.log(this.product)
 
       })
     },
