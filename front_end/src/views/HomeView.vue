@@ -50,20 +50,17 @@
     async dessertsIt1() {
       await api.get('/api/products/category/4/1').then(response => {
         this.desserts1 = response.data
-        console.log(3333, this.desserts1)
       })
     },
     async dessertsIt2() {
       await api.get('/api/products/category/4/2').then(response => {
         this.desserts2 = response.data
-        console.log(3333, this.desserts2)
       })
 
     },
     async dessertsIt3() {
       await api.get('/api/products/category/4/3').then(response => {
         this.desserts3 = response.data
-        console.log(3333, this.desserts3)
       })
     }
   },
