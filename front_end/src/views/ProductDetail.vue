@@ -27,7 +27,6 @@ export default defineComponent({
   setup() {
     const instance = getCurrentInstance().proxy
     const {$route} = instance
-    console.log($route.params)
   }
 })
 </script>
