@@ -48,7 +48,6 @@
     async dessertsIt() {
       await api.get('/api/products/category/3').then(response => {
         this.desserts = response.data
-        console.log(3333, this.desserts)
       })
   },
     async onDelete(id) {
@@ -59,7 +58,6 @@
       this.$router.push(path)
     },
     goToDetail(id) {
-      console.log('id', id)
       this.$router.push({
         name: 'productitem',
         params: {
