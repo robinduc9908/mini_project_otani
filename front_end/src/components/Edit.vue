@@ -111,7 +111,6 @@ export default {
     async dessertsIt() {
       await api.get('/api/products/' + this.$route.params.id).then(response => {
         this.desserts = response.data
-        console.log(this.$route.params.id)
       })
     }
   },
