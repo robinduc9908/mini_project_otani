@@ -49,7 +49,6 @@ export default {
     async loginVue() {
       try {
         await api.post('/api/users/login', this.login).then(response => {
-          console.log(response)
           if (response.data.code === 200) {
             localStorage.name = response.data.data[0].username
             localStorage.email = response.data.data[0].email
