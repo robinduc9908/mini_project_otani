@@ -93,13 +93,11 @@ export default Vue.extend({
     async dessertsIt() {
       await api.get('/api/products/' + this.$route.params.id).then(response => {
         this.desserts = response.data
-        console.log(this.$route.params.id)
       })
     },
     async openC(id) {
       this.cart.product_id = id
       await api.post('/api/carts', this.cart).then(response => {
-        console.log(this.product)
       })
     }
 
