@@ -45,7 +45,6 @@ export default {
     async deleteItem(id) {
       await api.delete('/api/products/' + id).then(response => {
         // this.$emit('onDelete',id)
-        console.log(id)
 
       })
       console.log(3333)
